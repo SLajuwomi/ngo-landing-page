@@ -4,6 +4,5 @@
         "src": "src/app/**/*",
         "use": "@vercel/next"
       }
-    ],
-    "root": "src"
+    ]
   }
