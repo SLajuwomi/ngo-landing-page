@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 56 26% 94%;  /* #f3f3ec */
+    --foreground: 168 33% 21%; /* #224a44 */
+    --card: 0 0% 100%;
+    --card-foreground: 168 33% 21%; /* #224a44 */
+    --popover: 0 0% 100%;
+    --popover-foreground: 168 33% 21%; /* #224a44 */
+    --primary: 168 33% 21%;   /* #224a44 - dark green */
+    --primary-foreground: 56 26% 94%; /* #f3f3ec - off white */
+    --secondary: 26 64% 61%;  /* #e58652 - orange */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 171 15% 68%;     /* #a3bbb5 - light green */
+    --muted-foreground: 168 33% 21%;
+    --accent: 24 28% 62%;     /* #ad9d8c - beige */
+    --accent-foreground: 168 33% 21%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 171 15% 68%;
+    --input: 171 15% 68%;
+    --ring: 26 64% 61%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 168 33% 15%;
+    --foreground: 56 26% 94%;
+    --card: 168 33% 21%;
+    --card-foreground: 56 26% 94%;
+    --popover: 168 33% 21%;
+    --popover-foreground: 56 26% 94%;
+    --primary: 56 26% 94%;
+    --primary-foreground: 168 33% 21%;
+    --secondary: 26 64% 61%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 171 15% 48%;
+    --muted-foreground: 56 26% 84%;
+    --accent: 24 28% 42%;
+    --accent-foreground: 56 26% 94%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 171 15% 38%;
+    --input: 171 15% 38%;
+    --ring: 26 64% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  .btn-primary {
+    @apply bg-secondary text-white rounded-full px-6 py-3 font-medium hover:bg-opacity-90 transition-all;
+  }
+  .btn-secondary {
+    @apply bg-primary text-white rounded-full px-6 py-3 font-medium hover:bg-opacity-90 transition-all;
+  }
+  .section-title {
+    @apply text-sm uppercase tracking-widest text-secondary mb-2 font-medium;
+  }
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold mb-6 leading-tight;
+  }
+}
